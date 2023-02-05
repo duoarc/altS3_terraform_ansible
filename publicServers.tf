@@ -46,8 +46,8 @@ resource "aws_instance" "alt_terraform_instances" {
 
 resource "null_resource" "ansible-playbook" {
   provisioner "local-exec" {
-    command = "ansible-playbook --private-key ${var.ssh_key}.pem instanceConfig.yml"
+    command = "ansible-aws_instance.alt_terraform_instancesplaybook --private-key ${var.ssh_key}.pem instanceConfig.yml"
   }
 
-  depends_on = [aws_instance.alt_terraform_instances]
+  depends_on = []
 } 
